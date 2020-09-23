@@ -1,26 +1,13 @@
-version: 2 # <1>
-jobs:
-  build:
-    working_directory: ~/repo
-    docker:
-      - image: circleci/openjdk:8-jdk-browsers # <2>
-    environment:
-      JVM_OPTS: -Xmx3200m  # <3>
-      TERM: dumb
-    steps: # <4>
-      - checkout  # <5>
-      - restore_cache: # <6>
-                key: grailsapp-{{ checksum "build.gradle" }}-{{ checksum "gradle.properties" }}
-      - run: chmod +x gradlew
-      - run: ./gradlew --console=plain testClasses  # <7>
-      - run: ./gradlew --console=plain integrationTestClasses  # <8>
-      - save_cache: # <9>
-                paths:
-                  - ~/.gradle
-                key: grailsapp-{{ checksum "build.gradle" }}-{{ checksum "gradle.properties" }}
-      - run: ./gradlew --console=plain -Dgeb.env=chromeHeadless check  # <10>
-      - store_artifacts: # <11>
-          path: build/reports
-          destination: reports
-      - store_test_results: # <12>
-          path: build/test-results
+# Use the latest 2.1 version of CircleCI pipeline process engine. See: https://circleci.com/docs/2.0/configuration-reference
+version: 2.1
+# Use a package of configuration called an orb.
+orbs:
+  # Declare a dependency on the welcome-orb
+  welcome: circleci/welcome-orb@0.4.1
+# Orchestrate or schedule a set of jobs
+workflows:
+  # Name the workflow "welcome"
+  welcome:
+    # Run the welcome/run job in its own container
+    jobs:
+      - welcome/run
