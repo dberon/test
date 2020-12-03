@@ -20,7 +20,7 @@ jobs:
                 key: grailsapp-{{ checksum "build.gradle" }}-{{ checksum "gradle.properties" }}
       - run: ./gradlew war  # <10>
       - store_artifacts: # <11>
-          path: build/reports
-          destination: reports
+          path: build/libs
+          destination: libs
       - store_test_results: # <12>
           path: build/test-results

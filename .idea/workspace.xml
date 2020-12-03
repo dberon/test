@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ec60b216-8d9a-49f2-8d89-643d655c3b9d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/grails-app/controllers/example/grails/UrlMappings.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/grails-app/controllers/example/grails/UrlMappings.groovy" afterDir="false" />
-    </list>
+    <list default="true" id="ec60b216-8d9a-49f2-8d89-643d655c3b9d" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -45,7 +43,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="371" />
     <option name="width" value="776" />
     <option name="height" value="891" />
@@ -159,16 +157,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1607012299248</updated>
-      <workItem from="1607012300472" duration="371000" />
+      <workItem from="1607012300472" duration="625000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="371000" />
+    <option name="totallyTimeSpent" value="625000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="0" width="1604" height="875" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Designer" />
       <window_info id="Image Layers" />
@@ -176,11 +173,11 @@
       <window_info id="UI Designer" />
       <window_info id="Favorites" side_tool="true" />
       <window_info id="Web" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24967825" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24967825" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Build" visible="true" weight="0.32977304" />
+      <window_info anchor="bottom" id="Build" weight="0.32977304" />
       <window_info anchor="bottom" id="Spring" />
-      <window_info anchor="bottom" id="Terminal" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32977304" />
       <window_info anchor="bottom" id="Docker" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" />
