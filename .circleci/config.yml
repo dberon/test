@@ -18,7 +18,7 @@ jobs:
                 paths:
                   - ~/.gradle
                 key: grailsapp-{{ checksum "build.gradle" }}-{{ checksum "gradle.properties" }}
-      - run: ./gradlew --console=plain -Dgeb.env=chromeHeadless check  # <10>
+      - run: ./gradlew war  # <10>
       - store_artifacts: # <11>
           path: build/reports
           destination: reports
