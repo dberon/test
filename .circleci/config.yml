@@ -1,5 +1,3 @@
-version: 2
-
  workflows: # Define a Workflow running the build job, then the deploy job
    version: 2
    build-deploy:
