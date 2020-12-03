@@ -18,7 +18,7 @@ jobs:
                 paths:
                   - ~/.gradle
                 key: grailsapp-{{ checksum "build.gradle" }}-{{ checksum "gradle.properties" }}
-      - run: grails dev war  # <10>
+      - run: ./gradlew bootWar  # <10>
       - store_artifacts: # <11>
           path: build/libs
           destination: libs
