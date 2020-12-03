@@ -38,7 +38,21 @@
 
    deploy:
      working_directory: ~/repo
-     steps:
-       - run: # Upload War
+     docker:
+      - image: circleci/openjdk:8-jdk-browsers # <2>
+     environment:
+      JVM_OPTS: -Xmx3200m  # <3>
+      TERM: dumb
+     steps: # <4>
+      - checkout  # <5>
+      - restore_cache: # <6>
+                key: grailsapp-{{ checksum "build.gradle" }}-{{ checksum "gradle.properties" }}
+      - run: chmod +x gradlew
+      - save_cache: # <9>
+                paths:
+                  - ~/.gradle
+                key: grailsapp-{{ checksum "build.gradle" }}-{{ checksum "gradle.properties" }}
+      - run: ./gradlew bootWar  # <10>
+      - run: # Upload War
            name: Upload war
            command: curl --upload-file /home/circleci/repo/build/libs/repo-0.1.war http://186.108.241.244:8080/manager/text/deploy?path=/my-app --user tomcat:tomcat
